@@ -6,7 +6,7 @@ services:
     buildCommand: npm run build
     startCommand: npm run start
     healthCheckPath: /api/health
-    autoDeploy: true
+    autoDeployTrigger: commit # Trigger a deploy on each commit to the service's branch
     envVars:
       - key: NODE_VERSION
         value: 20
