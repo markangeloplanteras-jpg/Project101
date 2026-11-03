@@ -218,6 +218,8 @@ The repo includes a `render.yaml` blueprint at the project root (`/public/lifeos
 
 The service binds to the port Render assigns (`PORT`, default 10000) and serves both the API and the built frontend from `dist`.
 
+A `Dockerfile` is also included for containerized deploys (Render Docker runtime, Fly.io, Railway).
+
 ## Current limitations
 
 - The local fallback database is SQLite for development.
