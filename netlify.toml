@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  VITE_API_BASE_URL = ""
+
+# Proxy API calls to the deployed backend (replace YOUR_API_HOST with your
+# API server URL, e.g. https://your-app.onrender.com or https://your-app.up.railway.app)
+[[redirects]]
+  from = "/api/*"
+  to = "https://YOUR_API_HOST/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
