@@ -3,7 +3,7 @@ services:
     name: lifeos-api
     runtime: node
     plan: free
-    buildCommand: npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm run start
     healthCheckPath: /api/health
     autoDeployTrigger: commit # Trigger a deploy on each commit to the service's branch
