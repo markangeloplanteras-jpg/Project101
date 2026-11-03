@@ -30,8 +30,3 @@ services:
         sync: false
       - key: AI_MODEL
         sync: false
-
-build:
-  environment:
-    NODE_VERSION: "20"
-    NODE_ENV: "development"
